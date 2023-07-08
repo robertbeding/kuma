@@ -74,7 +74,6 @@ Route::get('/posts/{slug}', function($slug) {
             kemudia saya foto tapi lupa saya tidak punya kamera hehehe",
         ],
     ];
-
     $new_post = [];
     foreach($blog_posts as $post) {
         if($post["slug"] === $slug) {
@@ -84,11 +83,9 @@ Route::get('/posts/{slug}', function($slug) {
 
     return view('post', [
         "title" => "single post",
-        $post => $new_post
+        "post" => $new_post
     ]);
 });
-
-
 
 Route::get('/contact', function () {
     return view('contact', [
