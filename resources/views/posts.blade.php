@@ -27,12 +27,12 @@
                 </div>
 
                 <h2 class="entry-title">
-                  <a href="/posts/{{ $post["slug"] }}">{{ $post["title"] }}</a>
+                  <a href="/posts/{{ $post->slug }}">{{ $post->title }}</a>
                 </h2>
 
                 <div class="entry-meta">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ $post["author"] }}</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ $post->name }}</a></li>
                     <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                     <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
                   </ul>
@@ -40,7 +40,7 @@
 
                 <div class="entry-content">
                   <p>
-                     {{ $post["body"] }}
+                     {{ $post->excerpt }}
                   </p>
 
                 </div>
