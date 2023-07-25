@@ -6,26 +6,25 @@
         <div class="container">
 
           <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="blog.html">Blog</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Blog</a></li>
           </ol>
-          <h2>Blog</h2>
+          <h2>Category : {{ $category }}</h2>
         </div>
     </section><!-- End Breadcrumbs -->
 
       <!-- ======= Blog Single Section ======= -->
       <section id="blog" class="blog">
-
         <div class="container" data-aos="fade-up">
 
           <div class="row">
 
             <div class="col-lg-8 entries">
-                 @foreach ($posts as $post)
+            @foreach ($posts as $post)
               <article class="entry entry-single">
 
                 <div class="entry-img">
-                  <img src="img/blog/blog-1.jpg" alt="" class="img-fluid">
+                  <img src="{{ asset('img/blog/blog-1.jpg') }}" alt="" class="img-fluid">
                 </div>
 
                 <h2 class="entry-title">
