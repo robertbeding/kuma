@@ -27,7 +27,7 @@
                 </div>
 
                 <h2 class="entry-title">
-                  <a href="blog-single.html"> {{ $post->title }}</a>
+                  <a href="blog-single.html"> {{ $post["title"] }}</a>
                 </h2>
 
                 <div class="entry-meta">
