@@ -9,6 +9,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/blog">Blog</a></li>
           </ol>
+          <h2>Single Blog</h2>
         </div>
       </section><!-- End Breadcrumbs -->
 
@@ -32,9 +33,9 @@
 
                 <div class="entry-meta">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html"> {{ $post["author"] }}</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href=""> {{ $post->user->name }}</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href=""><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="">12 Comments</a></li>
                   </ul>
                 </div>
 
@@ -45,7 +46,7 @@
                 </div>
 
                 <div class="entry-footer">
-                  <i class="bi bi-folder"></i>
+                  <i class="bi bi bi-tags"></i>
                   <ul class="cats">
                     <li><a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
                   </ul>
@@ -113,23 +114,7 @@
                   </div>
 
                 </div><!-- End sidebar recent posts-->
-
-                <h3 class="sidebar-title">Tags</h3>
-                <div class="sidebar-item tags">
-                  <ul>
-                    <li><a href="#">App</a></li>
-                    <li><a href="#">IT</a></li>
-                    <li><a href="#">Business</a></li>
-                    <li><a href="#">Mac</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Office</a></li>
-                    <li><a href="#">Creative</a></li>
-                    <li><a href="#">Studio</a></li>
-                    <li><a href="#">Smart</a></li>
-                    <li><a href="#">Tips</a></li>
-                    <li><a href="#">Marketing</a></li>
-                  </ul>
-                </div><!-- End sidebar tags-->
+            <!-- End sidebar tags-->
 
               </div><!-- End sidebar -->
 

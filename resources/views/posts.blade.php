@@ -34,7 +34,7 @@
 
                 <div class="entry-meta">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-single.html">{{ $post->name }}</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="">{{ $post->user->name }}</a></li>
                     <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                     <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
                   </ul>
@@ -45,19 +45,14 @@
                      {{ $post->excerpt }}
                   </p>
 
+                  <a href="/posts/{{ $post->slug }}">Read More...</a>
+
                 </div>
 
                 <div class="entry-footer">
-                  <i class="bi bi-folder"></i>
+                  <i class="bi bi-tags"></i>
                   <ul class="cats">
                     <li><a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
-                  </ul>
-
-                  <i class="bi bi-tags"></i>
-                  <ul class="tags">
-                    <li><a href="#">Creative</a></li>
-                    <li><a href="#">Tips</a></li>
-                    <li><a href="#">Marketing</a></li>
                   </ul>
                 </div>
 
