@@ -43,7 +43,7 @@
                   <p>
                      {{ $post->excerpt }}
                   </p>
-                  <a href="/post/{{ $post->slug }}">Read More...</a>
+                  <a href="/posts/{{ $post->slug }}">Read More...</a>
                 </div>
 
                 <div class="entry-footer">

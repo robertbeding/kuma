@@ -34,16 +34,13 @@
 
                 <div class="entry-meta">
                   <ul>
-                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="">{{ $post->user->name }}</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-single.html"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-single.html">12 Comments</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
                   </ul>
                 </div>
 
                 <div class="entry-content">
-                  <p>
-                     {{ $post->excerpt }}
-                  </p>
+                  <p>{{ $post->excerpt }}</p>
 
                   <a href="/posts/{{ $post->slug }}">Read More...</a>
 
@@ -55,7 +52,6 @@
                     <li><a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
                   </ul>
                 </div>
-
               </article><!-- End blog entry -->
             @endforeach
             </div><!-- End blog entries list -->
@@ -79,35 +75,13 @@
                   </ul>
                 </div><!-- End sidebar categories-->
 
+
                 <h3 class="sidebar-title">Recent Posts</h3>
+
                 <div class="sidebar-item recent-posts">
                   <div class="post-item clearfix">
                     <img src="img/blog/blog-recent-1.jpg" alt="">
-                    <h4><a href="blog-single.html">Nihil blanditiis at in nihil autem</a></h4>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-
-                  <div class="post-item clearfix">
-                    <img src="img/blog/blog-recent-2.jpg" alt="">
-                    <h4><a href="blog-single.html">Quidem autem et impedit</a></h4>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-
-                  <div class="post-item clearfix">
-                    <img src="img/blog/blog-recent-3.jpg" alt="">
-                    <h4><a href="blog-single.html">Id quia et et ut maxime similique occaecati ut</a></h4>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-
-                  <div class="post-item clearfix">
-                    <img src="img/blog/blog-recent-4.jpg" alt="">
-                    <h4><a href="blog-single.html">Laborum corporis quo dara net para</a></h4>
-                    <time datetime="2020-01-01">Jan 1, 2020</time>
-                  </div>
-
-                  <div class="post-item clearfix">
-                    <img src="img/blog/blog-recent-5.jpg" alt="">
-                    <h4><a href="blog-single.html">Et dolores corrupti quae illo quod dolor</a></h4>
+                    <h4><a href="">judul judul</a></h4>
                     <time datetime="2020-01-01">Jan 1, 2020</time>
                   </div>
 
