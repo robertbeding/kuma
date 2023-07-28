@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home',[
+    return view('home', [
         "title" => "Home"
     ]);
 });
@@ -39,10 +39,10 @@ Route::get('/contact', function () {
     ]);
 });
 
-Route::get('/blog', [PostController::class, 'index'] );
+Route::get('/blog', [PostController::class, 'index']);
 //halaman single post
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
-Route::get('/categories', function() {
+Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Post Categories',
         'categories' => Category::all()
@@ -50,18 +50,23 @@ Route::get('/categories', function() {
 });
 
 
-Route::get('/categories/{category:slug}', function(Category $category){
+Route::get('/categories/{category:slug}', function (Category $category) {
+
+    $categories = Category::withCount('posts')->get();
     return view('posts', [
         'title' => "Post By Category: $category->name",
-        'posts' => $category->posts
+        'posts' => $category->posts,
+        'categories' => $categories
     ]);
 });
 
 
-Route::get('/authors/{user:username}', function(User $author){
+Route::get('/authors/{username}', function ($username) {
+    $author = User::where('username', '=', $username)->with('posts')->first();
+    $categories = Category::withCount('posts')->get();
     return view('posts', [
         'title' => "Post By Author : $author->name",
         'posts' => $author->posts,
+        'categories' => $categories
     ]);
 });
-
