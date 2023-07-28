@@ -9,7 +9,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ol>
-          <h2>Blog</h2>
+          <h2>{{ $title }}</h2>
         </div>
     </section><!-- End Breadcrumbs -->
 
@@ -25,7 +25,7 @@
               <article class="entry entry-single">
 
                 <div class="entry-img">
-                  <img src="img/blog/blog-1.jpg" alt="" class="img-fluid">
+                  <img src="{{ asset('img/blog/blog-3.jpg') }}" alt="" class="img-fluid">
                 </div>
 
                 <h2 class="entry-title">
