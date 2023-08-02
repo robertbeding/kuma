@@ -9,7 +9,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/blog">Blog</a></li>
           </ol>
-          <h2>Single Blog</h2>
+          <h2>{{ $title }}</h2>
         </div>
       </section><!-- End Breadcrumbs -->
 
@@ -34,8 +34,8 @@
                 <div class="entry-meta">
                   <ul>
                     <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="/authors/{{ $post->author->username }}"> {{ $post->author->name }}</a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href=""><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
-                    <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="">12 Comments</a></li>
+                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href=""><time datetime="">{{ $post->created_at->diffForHumans() }}</time></a></li>
+                    {{-- <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="">12 Comments</a></li> --}}
                   </ul>
                 </div>
 

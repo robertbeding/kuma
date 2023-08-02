@@ -19,6 +19,48 @@
 
             <div class="row">
 
+                {{-- <div class="col-lg-8 entries">
+                    @if ($posts->count())
+                        <article class="entry entry-single">
+
+                            <div class="entry-img">
+                                <img src="" alt="" class="img-fluid">
+                            </div>
+
+                            <h2 class="entry-title">
+                                <a href="/posts/{{ $posts[0]->slug }}">{{ $posts[0]->title }}</a>
+                            </h2>
+
+                            <div class="entry-meta">
+                                <ul>
+                                    <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
+                                            href="/authors/{{ $posts[0]->author->username }}">{{ $posts[0]->author->name }}</a></li>
+                                    <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
+                                            href="#"><time datetime="2020-01-01">{{ $posts[0]->created_at->diffForHumans()}}</time></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="entry-content">
+                                <p>{{ $posts[0]->excerpt }}</p>
+
+                                <a href="/posts/{{ $posts[0]->slug }}">Read More...</a>
+
+                            </div>
+
+                            <div class="entry-footer">
+                                <i class="bi bi-tags"></i>
+                                <ul class="cats">
+                                    <li><a href="/categories/{{ $posts[0]->category->slug }}">{{ $posts[0]->category->name }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article><!-- End blog entry -->
+                    @else
+                    <p class="text-center fs-4"> No Post Found</p>
+                    @endif
+                </div> --}}
+
+
                 <div class="col-lg-8 entries">
                     @foreach ($posts as $post)
                         <article class="entry entry-single">
@@ -36,15 +78,13 @@
                                     <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
                                             href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a></li>
                                     <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="#"><time datetime="2020-01-01">Jan 1, 2020</time></a></li>
+                                            href="#"><time datetime="time">{{ $posts[0]->created_at->diffForHumans()}}</time></a></li>
                                 </ul>
                             </div>
 
                             <div class="entry-content">
                                 <p>{{ $post->excerpt }}</p>
-
                                 <a href="/posts/{{ $post->slug }}">Read More...</a>
-
                             </div>
 
                             <div class="entry-footer">
