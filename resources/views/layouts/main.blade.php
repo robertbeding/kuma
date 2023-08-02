@@ -56,7 +56,7 @@
 
 
  <!-- Template Main JS File -->
- <script src="{{ asset('js/script.js') }}js/script.js"></script>
+ <script src="{{ asset('js/script.js') }}"></script>
 
 </body>
 </html>

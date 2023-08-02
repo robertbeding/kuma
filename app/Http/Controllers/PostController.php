@@ -12,9 +12,9 @@ class PostController extends Controller
     {
         $categories = Category::withCount('posts')->get();
         return view('posts', [
-            "title" => "Blog",
+            "title" => "All Blog",
             //"posts" => Post::all()
-            "posts" => Post::latest()->get(),
+            "posts" => Post::with(['author', 'category'])->latest()->get(),
             'categories'=>$categories
         ]);
     }

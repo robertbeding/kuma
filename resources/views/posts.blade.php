@@ -5,8 +5,8 @@
         <div class="container">
 
             <ol>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blog.html">Blog</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
             </ol>
             <h2>{{ $title }}</h2>
         </div>

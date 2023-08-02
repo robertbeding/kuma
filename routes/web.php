@@ -55,7 +55,7 @@ Route::get('/categories/{category:slug}', function (Category $category) {
     $categories = Category::withCount('posts')->get();
     return view('posts', [
         'title' => "Post By Category: $category->name",
-        'posts' => $category->posts,
+        'posts' => $category->posts->load('category', 'author'),
         'categories' => $categories
     ]);
 });
@@ -66,7 +66,7 @@ Route::get('/authors/{username}', function ($username) {
     $categories = Category::withCount('posts')->get();
     return view('posts', [
         'title' => "Post By Author : $author->name",
-        'posts' => $author->posts,
+        'posts' => $author->posts->load('category', 'author'),
         'categories' => $categories
     ]);
 });
