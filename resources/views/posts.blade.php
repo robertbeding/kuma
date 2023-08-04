@@ -78,7 +78,7 @@
                                     <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a
                                             href="/authors/{{ $post->author->username }}">{{ $post->author->name }}</a></li>
                                     <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a
-                                            href="#"><time datetime="time">{{ $posts[0]->created_at->diffForHumans()}}</time></a></li>
+                                            href="#"><time datetime="time">{{ $post->created_at->diffForHumans() }}</time></a></li>
                                 </ul>
                             </div>
 
@@ -105,6 +105,9 @@
                         <h3 class="sidebar-title">Search</h3>
                         <div class="sidebar-item search-form">
                             <form action="/blog">
+                                @if (request('category'))
+                                <input type="hidden" name="category" value="{{ request('category') }}">
+                                @endif
                                 <input type="text" placeholder="Search" name="search" value="{{ request('search') }}">
                                 <button type="submit"><i class="bi bi-search"></i></button>
                             </form>

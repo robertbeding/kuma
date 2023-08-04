@@ -48,7 +48,7 @@
                 <div class="entry-footer">
                   <i class="bi bi bi-tags"></i>
                   <ul class="cats">
-                    <li><a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a></li>
+                    <li><a href="/posts?category={{ $post->category->slug }}">{{ $post->category->name }}</a></li>
                   </ul>
                 </div>
 
@@ -71,9 +71,13 @@
 
                 <h3 class="sidebar-title">Categories</h3>
                 <div class="sidebar-item categories">
-                  <ul>
-                    <li><a href="#">General <span>(25)</span></a></li>
-                  </ul>
+                    {{-- <ul>
+                        @foreach ($categories as $category)
+                            <li ><a class="{{ Request::is('categories/'.$category->slug) == $category->slug ?'active':'' }}"
+                                    href="/categories/{{ $category->slug }}">{{ $category->name }}<span>({{ $category->posts_count }})</span></a>
+                            </li>
+                        @endforeach
+                    </ul> --}}
                 </div><!-- End sidebar categories-->
 
                 <h3 class="sidebar-title">Recent Posts</h3>

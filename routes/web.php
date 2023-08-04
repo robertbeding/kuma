@@ -55,7 +55,8 @@ Route::get('/categories', function () {
 });
 
 
-Route::get('/categories/{category:slug}', function (Category $category) {
+Route::get('/categories/{category:slug}',
+    function (Category $category) {
     $categories = Category::withCount('posts')->get();
     return view('posts', [
         'title' => "Post By Category: $category->name",
