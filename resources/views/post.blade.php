@@ -41,7 +41,6 @@
 
                 <div class="entry-content">
                   <p>
-                  ini tes ke git hub
                     {!! $post->body !!}
                   </p>
                 </div>

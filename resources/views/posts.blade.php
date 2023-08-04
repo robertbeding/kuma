@@ -104,8 +104,8 @@
 
                         <h3 class="sidebar-title">Search</h3>
                         <div class="sidebar-item search-form">
-                            <form action="">
-                                <input type="text">
+                            <form action="/blog">
+                                <input type="text" placeholder="Search" name="search" value="{{ request('search') }}">
                                 <button type="submit"><i class="bi bi-search"></i></button>
                             </form>
                         </div><!-- End sidebar search formn-->
